@@ -1,0 +1,169 @@
+
+.logo{
+height: 100px;
+width: 500px;
+}
+
+.imgIcono{
+background-color: #e6e6e6;
+height: 100px;
+width: 250px;
+}
+
+nav {
+background-color: white;
+color: #fff;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+-webkit-box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.75);
+box-shadow: 1px 6px 18px 0px rgba(0,0,0,0.75);
+}
+
+.botonesNavbar{
+display: flex;
+gap: 30px;
+justify-content: center;
+align-items: center;
+}
+
+
+.btnFavorite,
+.btnContacts,
+.btnOverview {
+  padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: black;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btnFavorite:active,
+.btnContacts:active,
+.btnOverview:active {
+  background-color: #C1D72F; 
+}
+
+.btnNew {
+    background-color: #C1D72F;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px 10px 8px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 8px -6px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 8px -6px rgba(0,0,0,0.75);
+}
+
+.containerGeneral{
+display: flex;
+align-items: center;
+
+}
+
+
+.lineaVerde{
+background-color:  #C1D72F;
+height: 2px;
+width: 780px;
+margin-left: 30px;
+margin-top: 5px;
+}
+
+.container-favoritos {
+display: flex;
+
+}
+
+.favoritos{
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 200px; 
+padding: 20px; 
+margin: 20px; 
+border-radius: 10px; 
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.container{
+display: flex;
+align-items: center;
+text-align: center;
+flex-direction: column;
+}
+
+.container h2 {
+margin-bottom: 1px; 
+}
+
+.container img{
+border:  3px solid #C1D72F;
+border-radius: 50px;
+}
+
+.container p {
+margin-top: 1px; 
+}
+
+.container2 img{
+border-radius: 50px;
+}    
+
+.container2 h2 {
+margin-bottom: 1px; 
+}
+
+.container2 p {
+margin-top: 1px; 
+}
+
+.btnEliminar{
+padding: 10px;
+border:  1px solid;
+border-radius: 10px;
+color: red;
+cursor: pointer;
+}
+
+.container2{
+display: flex;
+align-items: center;
+text-align: center;
+flex-direction: column;
+}
+
+.Contactos{
+display: flex;
+justify-content: center;
+width: 200px; 
+padding: 20px; 
+margin: 20px; 
+border-radius: 10px; 
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.iconoCorazon{
+    color: #C1D72F;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+/* Formulario */
+
+.formulario{
+    padding: 100px;
+    background-color: #C1D72F;
+    width: 400px;
+    margin: 0px auto 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
