@@ -1,27 +1,30 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import './App.css';
 import { Favorites } from './componentes/Favorites.jsx';
 import {Contacts} from './componentes/Contacts'
-import { Nav } from './componentes/Nav.jsx';
-import { Header } from './componentes/Header.jsx';
-import { Header2 } from './componentes/Header2.jsx';
+import App from './App.jsx';
+import { Overview } from './componentes/Overview.jsx';
+import store from './redux/Store.jsx';
+import { Provider} from 'react-redux';
+import Home from './componentes/Home.jsx';
+
+
 
 
 const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<Home/>,
+  },
 {
-  
-  path:'/',
-  element:<Nav/>,
+  path:'home',
+  element:<App/>,
   children:[
     {
-      path:'/',
-      element:<Header/>
-    },
-    {
-      path:'/',
-      element:<Header2/>
+      path:'',
+      element:<Overview/>
     },
     {
       path:'favorites',
@@ -38,6 +41,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

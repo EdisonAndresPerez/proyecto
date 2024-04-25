@@ -1,12 +1,21 @@
-import '../App.css';    
+import "../App.css";
+import { Header } from "./Header";
+import { useSelector } from "react-redux";
+import { Cards } from "./Card";
 
-export function Favorites(){
-    return(
-        <div>
-             <h1>hola</h1>
-             <h2>como vamos</h2>
-             <h3>demostrar que funciona favoritos</h3>
-        </div>
-    )
+
+
+export function Favorites() {
+  const { contacts } = useSelector((state) => state.contacts);
+  const favorites = contacts.filter(contact => contact.isFavorite && !contact.isDeleted)
+  return (
+    <div>
+      <Header />
+      <div className="cardListContainer">
+      {favorites.filter(contact => contact.isFavorite).map((contact, i) => {
+          return <Cards  key={i}  user={contact} />;
+      })}
+      </div>
+    </div>
+  );
 }
-
